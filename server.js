@@ -14,7 +14,7 @@ mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("Database connected"));
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors());
 app.get("/", (req, res) => {
   return res.send("<h1>Welcome to DeveloperHub</h1>");
 });
